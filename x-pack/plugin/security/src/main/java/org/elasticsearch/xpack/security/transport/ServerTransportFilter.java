@@ -26,7 +26,7 @@ import org.elasticsearch.transport.nio.NioTcpChannel;
 import org.elasticsearch.xpack.core.security.SecurityContext;
 import org.elasticsearch.xpack.core.security.authc.Authentication;
 import org.elasticsearch.xpack.core.security.user.SystemUser;
-import org.elasticsearch.protocol.xpack.security.User;
+import org.elasticsearch.xpack.core.security.user.User;
 import org.elasticsearch.xpack.security.action.SecurityActionMapper;
 import org.elasticsearch.xpack.security.authc.AuthenticationService;
 import org.elasticsearch.xpack.security.authz.AuthorizationService;
@@ -53,7 +53,7 @@ public interface ServerTransportFilter {
             throws IOException;
 
     /**
-     * The server trasnport filter that should be used in nodes as it ensures that an incoming
+     * The server transport filter that should be used in nodes as it ensures that an incoming
      * request is properly authenticated and authorized
      */
     class NodeProfile implements ServerTransportFilter {
